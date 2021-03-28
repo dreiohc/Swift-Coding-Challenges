@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class AnswerController: UIViewController {
 	
 	// MARK: - Properties
@@ -38,12 +37,19 @@ class AnswerController: UIViewController {
 		return label
 	}()
 	
-	
 	private lazy var answerTextView: BasicTextView = {
 		let tv = BasicTextView()
 		tv.answerPlaceholderText = "Enter your answer here.."
 		tv.font = UIFont.systemFont(ofSize: 16)
 		return tv
+	}()
+	
+	private let titleBarLabel: UILabel = {
+		let label = UILabel()
+		label.numberOfLines = 0
+		label.font = UIFont.boldSystemFont(ofSize: 16.0)
+		label.textAlignment = .center
+		return label
 	}()
 	
 	// MARK: - Lifecycle
@@ -62,8 +68,9 @@ class AnswerController: UIViewController {
 	// MARK: - Helpers
 	
 	private func configure() {
-		self.title = "Answer"
-		
+		titleBarLabel.text = challenge?.title
+		navigationItem.titleView = titleBarLabel
+		view.backgroundColor = .systemBackground
 		view.addSubview(challengeLabel)
 		challengeLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor,
 													left: view.safeAreaLayoutGuide.leftAnchor,
@@ -99,20 +106,23 @@ class AnswerController: UIViewController {
 	}
 	
 	func setupUI() {
-		
 		guard let challenge = self.challenge else { return }
-		
 		challengeLabel.attributedText = attributedStatText(challenge: challenge.question, sample: challenge.sample)
-		upperAnswerPlaceholderLabel.text = challenge.upperPlaceholder
+		upperAnswerPlaceholderLabel.text = challenge.functionPlaceholder
 	}
 	
 	func attributedStatText(challenge: String, sample: String?) -> NSAttributedString {
-		let attributedText = NSMutableAttributedString(string: challenge, attributes: [.font: UIFont.boldSystemFont(ofSize: 12)])
-		attributedText.append(NSAttributedString(string: sample ?? "",
-																						 attributes: [.font: UIFont.systemFont(ofSize: 11),
+		
+		let newLineString = "\n\n"
+		let newLineSample = sample?.replacingOccurrences(of: ". ", with: ".\n")
+		
+		
+		let attributedText = NSMutableAttributedString(string: challenge + newLineString, attributes: [.font: UIFont.boldSystemFont(ofSize: 13)])
+		attributedText.append(NSAttributedString(string: (newLineSample ?? "") + newLineString,
+																						 attributes: [.font: UIFont.systemFont(ofSize: 13),
 																													.foregroundColor: UIColor.darkGray]))
 		
-		attributedText.append(NSAttributedString(string: "type your answer below:\n\n",
+		attributedText.append(NSAttributedString(string: "type your answer below:" + newLineString,
 																						 attributes: [.font: UIFont.systemFont(ofSize: 11)]))
 		
 		return attributedText

@@ -29,7 +29,7 @@ class BasicTextView: UITextView {
 		autocapitalizationType = .none
 		
 		addSubview(answerPlaceholderLabel)
-		answerPlaceholderLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 4, paddingLeft: 8)
+		answerPlaceholderLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 11, paddingLeft: 6)
 		
 		backgroundColor = .systemBackground
 		NotificationCenter.default.addObserver(self, selector: #selector(handleTextDidChange), name: UITextView.textDidChangeNotification, object: nil)

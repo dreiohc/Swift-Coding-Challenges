@@ -7,18 +7,22 @@
 
 import Foundation
 
-struct Challenge {
+struct Challenge: Codable {
+	let title: String
+	let difficulty: String
 	let question: String
 	let sample: String
+	let functionPlaceholder: String
 	let answer: String
-	let upperPlaceholder: String
-	let lowerPlaceholder: String
 	
-	init(question: String, sample: String, answer: String, upperPlaceholder: String, lowerPlaceholder: String) {
-		self.question = question
-		self.sample = sample
-		self.answer = answer
-		self.upperPlaceholder = upperPlaceholder
-		self.lowerPlaceholder = lowerPlaceholder
+	
+	enum CodingKeys: String, CodingKey {
+		case title
+		case difficulty
+		case question
+		case sample
+		case functionPlaceholder = "function_placeholder"
+		case answer
+		
 	}
 }
