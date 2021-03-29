@@ -15,7 +15,6 @@ struct Challenge: Codable {
 	let functionPlaceholder: String
 	let answer: String
 	
-	
 	enum CodingKeys: String, CodingKey {
 		case title
 		case difficulty
@@ -23,6 +22,6 @@ struct Challenge: Codable {
 		case sample
 		case functionPlaceholder = "function_placeholder"
 		case answer
-		
 	}
 }
+

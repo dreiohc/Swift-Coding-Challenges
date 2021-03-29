@@ -34,7 +34,7 @@ struct ChallengeViewModel {
 	var difficulty: String {
 		return challenge.difficulty
 	}
-	
+		
 	init(challenge: Challenge) {
 		self.challenge = challenge
 	}

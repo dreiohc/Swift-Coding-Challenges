@@ -9,8 +9,8 @@ import UIKit
 
 class BasicTextView: UITextView {
 	
-	var answerPlaceholderText: String? {
-		didSet { answerPlaceholderLabel.text = answerPlaceholderText }
+	var answerPlaceholderText: NSAttributedString? {
+		didSet { answerPlaceholderLabel.attributedText = answerPlaceholderText }
 	}
 	
 	
@@ -29,9 +29,10 @@ class BasicTextView: UITextView {
 		autocapitalizationType = .none
 		
 		addSubview(answerPlaceholderLabel)
-		answerPlaceholderLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 11, paddingLeft: 6)
+		answerPlaceholderLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 7, paddingLeft: 6)
 		
-		backgroundColor = .systemBackground
+		backgroundColor = #colorLiteral(red: 0.1293964982, green: 0.1294215322, blue: 0.1293910444, alpha: 1)
+		layer.cornerRadius = 5
 		NotificationCenter.default.addObserver(self, selector: #selector(handleTextDidChange), name: UITextView.textDidChangeNotification, object: nil)
 	}
 	

@@ -13,8 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+		setupDefaults()
 		return true
+	}
+	
+	private func setupDefaults() {
+		let userdefaults = UserDefaults.standard
+		if userdefaults.value(forKey: KEY_FINISHED_CHALLENGES) == nil {
+			userdefaults.set(object: [0: false], forKey: KEY_FINISHED_CHALLENGES)
+		}
 	}
 
 	// MARK: UISceneSession Lifecycle

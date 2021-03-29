@@ -37,13 +37,13 @@ class ChallengesCell: UITableViewCell {
 		
 	
 		let stack = UIStackView(arrangedSubviews: [challengeTitleLabel, difficultyLabel])
-		stack.distribution = .equalCentering
+		stack.distribution = .fillEqually
 		stack.spacing = 20
 		stack.alignment = .leading
 		
 		addSubview(stack)
 		stack.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor,
-								 paddingTop: 10, paddingLeft: 10, paddingBottom: 10, paddingRight: 10)
+								 paddingTop: 10, paddingLeft: 10, paddingBottom: 10, paddingRight: 50)
 	}
 		
 	required init?(coder: NSCoder) {

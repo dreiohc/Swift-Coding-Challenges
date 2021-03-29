@@ -7,3 +7,12 @@
 
 import Foundation
 
+// MARK: - UserDefaults
+
+let KEY_FINISHED_CHALLENGES = "finished-challenges"
+
+
+
+// MARK: - typealias
+
+typealias AnsweredChallenges = [Int: Bool]

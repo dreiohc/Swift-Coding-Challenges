@@ -29,6 +29,8 @@
 		C4B31E7F260F1E0A00735A9F /* BasicTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E7E260F1E0A00735A9F /* BasicTextView.swift */; };
 		C4B31E86260F4D5400735A9F /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E85260F4D5400735A9F /* Challenge.swift */; };
 		C4B31E89260F581800735A9F /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E88260F581800735A9F /* Protocol.swift */; };
+		C4C13530261179BC00097311 /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C1352F261179BC00097311 /* UserDefaultsBacked.swift */; };
+		C4C135352611D92200097311 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C135342611D92200097311 /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		C4B31E81260F4CF100735A9F /* AnswerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerController.swift; sourceTree = "<group>"; };
 		C4B31E85260F4D5400735A9F /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		C4B31E88260F581800735A9F /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		C4C1352F261179BC00097311 /* UserDefaultsBacked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsBacked.swift; sourceTree = "<group>"; };
+		C4C135342611D92200097311 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 		C46D8C48260F069100F77633 /* HWS Swift Coding Challenges Tester */ = {
 			isa = PBXGroup;
 			children = (
+				C4C1352E2611799C00097311 /* Utils */,
 				C44FEFEE26107B6300DCA4C3 /* View Models */,
 				C44FEFEA2610730400DCA4C3 /* Service */,
 				C44FEFDC2610602500DCA4C3 /* Constants */,
@@ -151,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				C46D8C88260F06FD00F77633 /* UIViewController.swift */,
+				C4C135342611D92200097311 /* UserDefaults.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,8 +173,8 @@
 		C46D8C91260F0D1E00F77633 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C4B31E8C260F584300735A9F /* Sections */,
 				C4B31E53260F14A200735A9F /* MainTabController.swift */,
+				C4B31E8C260F584300735A9F /* Sections */,
 				C4B31E81260F4CF100735A9F /* AnswerController.swift */,
 			);
 			path = Controller;
@@ -201,6 +207,14 @@
 				C4B31E7A260F188800735A9F /* Section5Controller.swift */,
 			);
 			path = Sections;
+			sourceTree = "<group>";
+		};
+		C4C1352E2611799C00097311 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C4C1352F261179BC00097311 /* UserDefaultsBacked.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +292,7 @@
 				C44FEFF526107CFA00DCA4C3 /* ChallengeViewModel.swift in Sources */,
 				C46D8C8E260F0CCE00F77633 /* BasicButton.swift in Sources */,
 				C4B31E89260F581800735A9F /* Protocol.swift in Sources */,
+				C4C135352611D92200097311 /* UserDefaults.swift in Sources */,
 				C4B31E54260F14A200735A9F /* MainTabController.swift in Sources */,
 				C44FEFE2261060AF00DCA4C3 /* ChallengesCell.swift in Sources */,
 				C44FEFDE2610603300DCA4C3 /* Constants.swift in Sources */,
@@ -289,6 +304,7 @@
 				C4B31E7F260F1E0A00735A9F /* BasicTextView.swift in Sources */,
 				C46D8C4C260F069200F77633 /* SceneDelegate.swift in Sources */,
 				C4B31E74260F181700735A9F /* Section3Controller.swift in Sources */,
+				C4C13530261179BC00097311 /* UserDefaultsBacked.swift in Sources */,
 				C44FF0002610878300DCA4C3 /* AnswerController.swift in Sources */,
 				C4B31E77260F186600735A9F /* Section4Controller.swift in Sources */,
 				C44FEFE526106DBC00DCA4C3 /* ChallengeBank.swift in Sources */,

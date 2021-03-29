@@ -18,19 +18,21 @@ struct ChallengeBank {
 	"function_placeholder": "func challenge(input: String) -> Bool {",
 	"answer": "return Set(input).count == input.count"
 	},{
+
 	"title": "Is a string a palindrome?",
 	"difficulty": "Easy",
 	"question": "Write a function that accepts a String as its only parameter, and returns true if the string reads the same when reversed, ignoring case.",
-	"sample": "sample 2",
+	"sample": "The string 'rotator' shoud return true. The string 'Rats live on no evil star' should return true. The string 'Never odd or even' should return false; even though the letters are the same in reverse the spaces are in different places. The string 'Hello, world' should return false because it reads 'dlrow, olleH' backwards.",
 	"function_placeholder": "func challenge(input: String) -> Bool {",
 	"answer": "return input.lowercased().reversed() == Array(input.lowercased())"
 	},{
+
 	"title": "Do two strings contain the same characters?",
 	"difficulty": "Easy",
-	"question": "question 3",
-	"sample": "sample 3",
-	"function_placeholder": "function 3",
-	"answer": "answer 3"
+	"question": "Write a function that accepts two String parameters, and returns true if they contain the same characters in any order taking into account letter case.",
+	"sample": "The strings 'abca' and 'abca' should return true. The strings 'abc' and 'cba' should return true. The strings 'a1 b2' and 'b 1 a 2' should return true. The strings 'abc' and 'abca' should returrn false. The strings 'abc' and 'Abc' should return false. The strings 'abc' and 'cbAa' should return false.",
+	"function_placeholder": "func challenge(string1: String, string2: String) -> Bool {",
+	"answer": "let array1 = Array(string1)\\nlet array2 = Array(string2)\\nreturn array1.sorted() == array2.sorted()"
 	}]
 	""".data(using: .utf8)!
 	
