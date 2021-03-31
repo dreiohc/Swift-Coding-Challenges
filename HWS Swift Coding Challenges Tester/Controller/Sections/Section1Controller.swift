@@ -43,15 +43,22 @@ class Section1Controller: UITableViewController {
 	
 	@objc func clearChallenges() {
 		UserDefaults.standard.removeObject(forKey: KEY_FINISHED_CHALLENGES)
+		UserDefaults.standard.removeObject(forKey: KEY_STORED_CHALLENGES)
 		finishedChallenges = [:]
+		getSectionDetails()
 		tableView.reloadData()
 	}
 	
-	// MARK: - Challenges
-	
 	func getSectionDetails() {
-		Service.getChallenges(section: ChallengeBank().section1) { challenges in
-			self.challenges = challenges
+		
+		if let storedChallenges = UserDefaults.standard.object([Challenge].self, with: KEY_STORED_CHALLENGES) {
+			self.challenges = storedChallenges
+		} else {
+			Service.getChallenges(section: ChallengeBank().section1) { challenges in
+				let shuffledChallenges = challenges.shuffled()
+				self.challenges = shuffledChallenges
+				UserDefaults.standard.set(object: shuffledChallenges, forKey: KEY_STORED_CHALLENGES)
+			}
 		}
 	}
 	
@@ -62,7 +69,6 @@ class Section1Controller: UITableViewController {
 	}
 		
 }
-
 
 	// MARK: - UITableViewDataSource
 extension Section1Controller {

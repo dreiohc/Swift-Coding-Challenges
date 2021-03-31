@@ -34,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		427B3DACBD360C6877301B46 /* Pods-HWS Swift Coding Challenges Tester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWS Swift Coding Challenges Tester.release.xcconfig"; path = "Target Support Files/Pods-HWS Swift Coding Challenges Tester/Pods-HWS Swift Coding Challenges Tester.release.xcconfig"; sourceTree = "<group>"; };
+		6651EC18822DC3A6756CEDC3 /* Pods-HWS Swift Coding Challenges Tester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWS Swift Coding Challenges Tester.debug.xcconfig"; path = "Target Support Files/Pods-HWS Swift Coding Challenges Tester/Pods-HWS Swift Coding Challenges Tester.debug.xcconfig"; sourceTree = "<group>"; };
 		C44FEFDD2610603300DCA4C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C44FEFE1261060AF00DCA4C3 /* ChallengesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesCell.swift; sourceTree = "<group>"; };
 		C44FEFE426106DBC00DCA4C3 /* ChallengeBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBank.swift; sourceTree = "<group>"; };
@@ -73,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		830DD41FF05212E123D8189D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6651EC18822DC3A6756CEDC3 /* Pods-HWS Swift Coding Challenges Tester.debug.xcconfig */,
+				427B3DACBD360C6877301B46 /* Pods-HWS Swift Coding Challenges Tester.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C44FEFDC2610602500DCA4C3 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +130,8 @@
 			children = (
 				C46D8C48260F069100F77633 /* HWS Swift Coding Challenges Tester */,
 				C46D8C47260F069100F77633 /* Products */,
+				830DD41FF05212E123D8189D /* Pods */,
+				E6AC6CEE971E61BEDD1EBD5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,6 +230,13 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		E6AC6CEE971E61BEDD1EBD5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,6 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C46D8C5A260F069400F77633 /* Build configuration list for PBXNativeTarget "HWS Swift Coding Challenges Tester" */;
 			buildPhases = (
+				5A52CD35518A176F0B91CA75 /* [CP] Check Pods Manifest.lock */,
 				C46D8C42260F069100F77633 /* Sources */,
 				C46D8C43260F069100F77633 /* Frameworks */,
 				C46D8C44260F069100F77633 /* Resources */,
@@ -281,6 +302,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A52CD35518A176F0B91CA75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HWS Swift Coding Challenges Tester-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C46D8C42260F069100F77633 /* Sources */ = {
@@ -451,6 +497,7 @@
 		};
 		C46D8C5B260F069400F77633 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6651EC18822DC3A6756CEDC3 /* Pods-HWS Swift Coding Challenges Tester.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,6 +517,7 @@
 		};
 		C46D8C5C260F069400F77633 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 427B3DACBD360C6877301B46 /* Pods-HWS Swift Coding Challenges Tester.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

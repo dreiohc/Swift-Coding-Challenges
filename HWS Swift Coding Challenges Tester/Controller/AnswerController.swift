@@ -28,11 +28,11 @@ class AnswerController: UIViewController {
 		return label
 	}()
 	
-	private lazy var submitAnswerBarButton: UIButton = {
+	private lazy var revealAnswerBarButton: UIButton = {
 		let button = UIButton(type: .system)
-		button.setTitle("Submit", for: .normal)
+		button.setTitle("Give up", for: .normal)
 		button.sizeToFit()
-		button.addTarget(self, action: #selector(didTapSubmitAnswer), for: .touchUpInside)
+		button.addTarget(self, action: #selector(revealAnswer), for: .touchUpInside)
 		return button
 	}()
 	
@@ -55,6 +55,7 @@ class AnswerController: UIViewController {
 		let tv = BasicTextView()
 		tv.answerPlaceholderText = answerPlaceholderAttributedText(placeholder: "Enter your answer here and tap ", buttonTitle: "Submit")
 		tv.font = UIFont.systemFont(ofSize: 11)
+		tv.textColor = .white
 		return tv
 	}()
 	
@@ -63,18 +64,30 @@ class AnswerController: UIViewController {
 		label.font = UIFont.systemFont(ofSize: 11)
 		label.lineBreakMode = .byWordWrapping
 		label.numberOfLines = 0
-		label.text = "\n}"
+		label.text = "}"
 		return label
 	}()
 	
 	private let resultLabel: UILabel = {
 		let label = UILabel()
-		label.font = UIFont.boldSystemFont(ofSize: 17)
+		label.font = UIFont.boldSystemFont(ofSize: 15)
+		label.numberOfLines = 0
+		label.lineBreakMode = .byWordWrapping
 		label.textAlignment = .center
 		label.textColor = .systemRed
 		return label
 	}()
 
+	private let submitAnswerAnswerButton: UIButton = {
+		let button = UIButton(type: .system)
+		button.setTitle("Submit", for: .normal)
+		button.backgroundColor = .systemYellow
+		button.layer.cornerRadius = 5
+		button.setTitleColor(.systemBackground, for: .normal)
+		button.addTarget(self, action: #selector(didTapSubmitAnswer), for: .touchUpInside)
+		return button
+	}()
+	
 	
 	// MARK: - Lifecycle
 	
@@ -99,10 +112,17 @@ class AnswerController: UIViewController {
 			delegate?.didTapDoneOnAnswerController(finishedChallenges: finishedChallenges)
 		} else if answerTextView.text.isEmpty {
 			resultLabel.text = "Enter your answer first"
+			resultLabel.textColor = .systemOrange
 		} else {
 			resultLabel.text = "Try again.."
+			resultLabel.textColor = .systemRed
 		}
 		
+	}
+	
+	@objc func revealAnswer() {
+		answerTextView.answerPlaceholderLabel.isHidden = answerTextView.text.isEmpty
+		answerTextView.text = challenge?.answer
 	}
 	
 
@@ -120,12 +140,20 @@ class AnswerController: UIViewController {
 													paddingLeft: 8,
 													paddingRight: 8)
 		
+		view.addSubview(resultLabel)
+		resultLabel.anchor(top: challengeLabel.bottomAnchor,
+											 left: view.safeAreaLayoutGuide.leftAnchor,
+											 right: view.safeAreaLayoutGuide.rightAnchor,
+											 paddingLeft: 8,
+											 paddingRight: 8)
+		
 		view.addSubview(functionPlaceholderLabel)
-		functionPlaceholderLabel.anchor(top: challengeLabel.bottomAnchor,
-																			 left: view.safeAreaLayoutGuide.leftAnchor,
-																			 right: view.safeAreaLayoutGuide.rightAnchor,
-																			 paddingLeft: 8,
-																			 paddingRight: 8)
+		functionPlaceholderLabel.anchor(top: resultLabel.bottomAnchor,
+																		left: view.safeAreaLayoutGuide.leftAnchor,
+																		right: view.safeAreaLayoutGuide.rightAnchor,
+																		paddingLeft: 8,
+																		paddingRight: 8)
+		
 		view.addSubview(answerTextView)
 		answerTextView.anchor(top: functionPlaceholderLabel.bottomAnchor,
 													left: view.safeAreaLayoutGuide.leftAnchor,
@@ -138,21 +166,15 @@ class AnswerController: UIViewController {
 		lowerPlaceholderLabel.anchor(top: answerTextView.bottomAnchor,
 																 left: view.safeAreaLayoutGuide.leftAnchor,
 																 right: view.safeAreaLayoutGuide.rightAnchor,
-																 paddingTop: -8,
 																 paddingLeft: 8,
 																 paddingRight: 8)
 		
-		view.addSubview(resultLabel)
-		resultLabel.anchor(top: lowerPlaceholderLabel.bottomAnchor,
-											 left: view.safeAreaLayoutGuide.leftAnchor,
-											 bottom: view.safeAreaLayoutGuide.bottomAnchor,
-											 right: view.safeAreaLayoutGuide.rightAnchor,
-											 paddingTop: 10,
-											 paddingLeft: 8,
-											 paddingBottom: 8,
-											 paddingRight: 8)
-	
-		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: submitAnswerBarButton)
+		view.addSubview(submitAnswerAnswerButton)
+		submitAnswerAnswerButton.centerX(inView: view, topAnchor: lowerPlaceholderLabel.bottomAnchor)
+		submitAnswerAnswerButton.setWidth(100)
+		submitAnswerAnswerButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: 8)
+		
+		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: revealAnswerBarButton)
 	}
 	
 	func setupUI() {

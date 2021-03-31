@@ -10,9 +10,10 @@ import Foundation
 // MARK: - UserDefaults
 
 let KEY_FINISHED_CHALLENGES = "finished-challenges"
-
+let KEY_STORED_CHALLENGES = "stored-challenges"
 
 
 // MARK: - typealias
 
 typealias AnsweredChallenges = [Int: Bool]
+typealias FirestoreCompletion = (Error?) -> Void
