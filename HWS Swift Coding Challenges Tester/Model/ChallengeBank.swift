@@ -65,6 +65,22 @@ struct ChallengeBank {
 	"sample": "The string \\"a[space][space][space]b[space][space][space]c\\" should return \\"a[space]b[space]c\\". The string \\"[space][space][space][space]a\\" should return \\"[space]a\\". The string \\"abc\\" should return \\"abc\\".",
 	"function_placeholder": "func challenge(input: String) -> String {",
 	"answer": "var seenSpace = false\\nvar returnValue = \\"\\"\\n\\nfor character in input {\\n  if character == \\" \\" {\\n    if seenSpace { continue }\\n    seenSpace = true\\n  } else {\\n    seenSpace = false\\n  }\\n  returnValue.append(character)\\n}\\nreturn returnValue"
+	},{
+
+	"title": "String is rotated",
+	"difficulty": "Tricky",
+	"question": "Write a function that accepts two strings, and returns true if one string is rotation of the other, taking letter case into account.",
+	"sample": "The string \\"abcde\\" and \\"eabcd\\" should return true. The string \\"abcdde\\" and \\"cdeab\\" should return true. the string \\"abcde\\" and \\"abced\\" should return false; this is not a string rotation. The string \\"abc\\" and \\"a\\" should return false; this is not a string rotation.",
+	"function_placeholder": "func challenge(input: String, rotated: String) -> Bool {",
+	"answer": "guard input.count == rotated.count else { return false }\\nlet combined = input + input\\nreturn combined.contains(rotated)"
+	},{
+
+	"title": "Find pangrams",
+	"difficulty": "Tricky",
+	"question": "Write a function that returns true if it is given that is an English pangram, ignoring letter case.",
+	"sample": "The string \\"The quick brown fox jumps over the lazy dog\\" should return true. The string \\"The quick brown fox jumped over the lazy dog\\" should return false because it's missing the S.",
+	"function_placeholder": "func challenge(input: String) -> Bool {",
+	"answer": "let set = Set(input.lowercased())\\nlet letters = set.filter { $0 >= \\"a\\" && $0 <= \\"z\\" }\\nreturn letters.count == 26"
 	}]
 	""".data(using: .utf8)!
 	

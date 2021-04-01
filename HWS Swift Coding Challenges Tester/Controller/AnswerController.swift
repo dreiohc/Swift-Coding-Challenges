@@ -121,6 +121,7 @@ class AnswerController: UIViewController {
 	}
 	
 	@objc func revealAnswer() {
+		answerTextView.text = ""
 		answerTextView.answerPlaceholderLabel.isHidden = answerTextView.text.isEmpty
 		answerTextView.text = challenge?.answer
 	}
