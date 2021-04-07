@@ -54,7 +54,7 @@ class Section1Controller: UITableViewController {
 		if let storedChallenges = UserDefaults.standard.object([Challenge].self, with: KEY_STORED_CHALLENGES) {
 			self.challenges = storedChallenges
 		} else {
-			Service.getChallenges(section: ChallengeBank().section1) { challenges in
+			Service.getChallenges(section: "ChallengeSection1") { challenges in
 				let shuffledChallenges = challenges.shuffled()
 				self.challenges = shuffledChallenges
 				UserDefaults.standard.set(object: shuffledChallenges, forKey: KEY_STORED_CHALLENGES)

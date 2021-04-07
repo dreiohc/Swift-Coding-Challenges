@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C44FEFDE2610603300DCA4C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FEFDD2610603300DCA4C3 /* Constants.swift */; };
 		C44FEFE2261060AF00DCA4C3 /* ChallengesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FEFE1261060AF00DCA4C3 /* ChallengesCell.swift */; };
-		C44FEFE526106DBC00DCA4C3 /* ChallengeBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FEFE426106DBC00DCA4C3 /* ChallengeBank.swift */; };
 		C44FEFEC2610731000DCA4C3 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FEFEB2610731000DCA4C3 /* Service.swift */; };
 		C44FEFF526107CFA00DCA4C3 /* ChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FEFE72610704000DCA4C3 /* ChallengeViewModel.swift */; };
 		C44FF0002610878300DCA4C3 /* AnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E81260F4CF100735A9F /* AnswerController.swift */; };
@@ -20,6 +19,7 @@
 		C46D8C56260F069400F77633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46D8C54260F069400F77633 /* LaunchScreen.storyboard */; };
 		C46D8C89260F06FD00F77633 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D8C88260F06FD00F77633 /* UIViewController.swift */; };
 		C46D8C8E260F0CCE00F77633 /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D8C8D260F0CCE00F77633 /* BasicButton.swift */; };
+		C485D8DB261D572200C39BD6 /* ChallengeSection1.json in Resources */ = {isa = PBXBuildFile; fileRef = C485D8DA261D572200C39BD6 /* ChallengeSection1.json */; };
 		C4B31E54260F14A200735A9F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E53260F14A200735A9F /* MainTabController.swift */; };
 		C4B31E57260F14CD00735A9F /* Section1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D8C4D260F069200F77633 /* Section1Controller.swift */; };
 		C4B31E71260F17FF00735A9F /* Section2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E70260F17FF00735A9F /* Section2Controller.swift */; };
@@ -38,7 +38,6 @@
 		6651EC18822DC3A6756CEDC3 /* Pods-HWS Swift Coding Challenges Tester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWS Swift Coding Challenges Tester.debug.xcconfig"; path = "Target Support Files/Pods-HWS Swift Coding Challenges Tester/Pods-HWS Swift Coding Challenges Tester.debug.xcconfig"; sourceTree = "<group>"; };
 		C44FEFDD2610603300DCA4C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C44FEFE1261060AF00DCA4C3 /* ChallengesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesCell.swift; sourceTree = "<group>"; };
-		C44FEFE426106DBC00DCA4C3 /* ChallengeBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBank.swift; sourceTree = "<group>"; };
 		C44FEFE72610704000DCA4C3 /* ChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewModel.swift; sourceTree = "<group>"; };
 		C44FEFEB2610731000DCA4C3 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		C46D8C46260F069100F77633 /* HWS Swift Coding Challenges Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HWS Swift Coding Challenges Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +50,7 @@
 		C46D8C57260F069400F77633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46D8C88260F06FD00F77633 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		C46D8C8D260F0CCE00F77633 /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
+		C485D8DA261D572200C39BD6 /* ChallengeSection1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ChallengeSection1.json; sourceTree = "<group>"; };
 		C4B31E53260F14A200735A9F /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		C4B31E70260F17FF00735A9F /* Section2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section2Controller.swift; sourceTree = "<group>"; };
 		C4B31E73260F181700735A9F /* Section3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section3Controller.swift; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				C4B31E85260F4D5400735A9F /* Challenge.swift */,
-				C44FEFE426106DBC00DCA4C3 /* ChallengeBank.swift */,
+				C485D8DA261D572200C39BD6 /* ChallengeSection1.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -296,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46D8C56260F069400F77633 /* LaunchScreen.storyboard in Resources */,
+				C485D8DB261D572200C39BD6 /* ChallengeSection1.json in Resources */,
 				C46D8C53260F069400F77633 /* Assets.xcassets in Resources */,
 				C46D8C51260F069200F77633 /* Main.storyboard in Resources */,
 			);
@@ -353,7 +354,6 @@
 				C4C13530261179BC00097311 /* UserDefaultsBacked.swift in Sources */,
 				C44FF0002610878300DCA4C3 /* AnswerController.swift in Sources */,
 				C4B31E77260F186600735A9F /* Section4Controller.swift in Sources */,
-				C44FEFE526106DBC00DCA4C3 /* ChallengeBank.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

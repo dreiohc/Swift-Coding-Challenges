@@ -9,12 +9,18 @@ import Foundation
 
 class Service {
 	
-	static func getChallenges(section: Data, completion: ([Challenge]) -> Void) {
+	static func getChallenges(section: String, completion: ([Challenge]) -> Void) {
+		guard let sourcesURL = Bundle.main.url(forResource: section, withExtension: "json") else { fatalError("could not find json") }
+		
 		do {
-			let section = try JSONDecoder().decode([Challenge].self, from: section)
-			completion(section)
+			let sectionData = try Data(contentsOf: sourcesURL)
+			let decoder = JSONDecoder()
+			let section = try decoder.decode([Challenge].self, from: sectionData)
+			completion(section)			
 		} catch let error {
-			print("DEBUG: error decoding section \(error)")
+			print("DEBUG: \(error.localizedDescription)")
+			return
 		}
+		
 	}
 }
