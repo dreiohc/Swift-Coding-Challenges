@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	private func setupDefaults() {
 		let userdefaults = UserDefaults.standard
-		if userdefaults.value(forKey: KEY_FINISHED_CHALLENGES) == nil {
-			userdefaults.set(object: [0: false], forKey: KEY_FINISHED_CHALLENGES)
+		if userdefaults.value(forKey: KEY_FINISHED_CHALLENGES_1) == nil {
+			userdefaults.set(object: [0: false], forKey: KEY_FINISHED_CHALLENGES_1)
 		}
 	}
 

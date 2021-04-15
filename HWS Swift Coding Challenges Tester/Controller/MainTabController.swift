@@ -30,7 +30,7 @@ class MainTabController: UITabBarController {
 		let section2 = templateNavigationController(title: "Section 2", rootViewController: Section2Controller())
 		let section3 = templateNavigationController(title: "Section 3", rootViewController: Section3Controller())
 		let section4 = templateNavigationController(title: "Section 4", rootViewController: Section4Controller())
-		let section5 = templateNavigationController(title: "Section 5", rootViewController: Section5Controller())
+		let section5 = templateNavigationController(title: "Sean Allen's", rootViewController: SeanAllenController())
 		
 		viewControllers = [section1, section2, section3, section4, section5]
 		

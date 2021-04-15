@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChallengesCell: UITableViewCell {
+class Section1Cell: UITableViewCell {
 	
 	// MARK: - Properties
 	var viewModel: ChallengeViewModel? {

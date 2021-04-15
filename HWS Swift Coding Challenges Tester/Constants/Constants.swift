@@ -9,8 +9,11 @@ import Foundation
 
 // MARK: - UserDefaults
 
-let KEY_FINISHED_CHALLENGES = "finished-challenges"
-let KEY_STORED_CHALLENGES = "stored-challenges"
+let KEY_FINISHED_CHALLENGES_1 = "finished-challenges-1"
+let KEY_STORED_CHALLENGES_1 = "stored-challenges-1"
+
+let KEY_FINISHED_SEAN_ALLEN = "finished-sean-allen"
+let KEY_STORED_SEAN_ALLEN = "stored-sean-allen"
 
 
 // MARK: - typealias

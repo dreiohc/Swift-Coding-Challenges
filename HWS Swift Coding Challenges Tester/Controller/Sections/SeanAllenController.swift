@@ -1,16 +1,15 @@
 //
-//  ViewController.swift
+//  Section5Controller.swift
 //  HWS Swift Coding Challenges Tester
 //
 //  Created by Myron Dulay on 3/27/21.
 //
 
-
 import UIKit
 
-private let reuseIdentifier = "Section1Cell"
+private let reuseIdentifier = "SeanAllenCell"
 
-class Section1Controller: UITableViewController {
+class SeanAllenController: UITableViewController {
 	
 	// MARK: - Properties
 	
@@ -30,9 +29,9 @@ class Section1Controller: UITableViewController {
 	// MARK: - Helpers
 	
 	private func configure() {
-		self.title = "Section 1"
+		self.title = "Sean Allen's"
 		view.backgroundColor = .systemBackground
-		tableView.register(Section1Cell.self, forCellReuseIdentifier: reuseIdentifier)
+		tableView.register(SeanAllenCell.self, forCellReuseIdentifier: reuseIdentifier)
 		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Clear Progress",
 																											 style: .plain,
 																											 target: self,
@@ -42,8 +41,8 @@ class Section1Controller: UITableViewController {
 	// MARK: - Actions
 	
 	@objc func clearChallenges() {
-		UserDefaults.standard.removeObject(forKey: KEY_FINISHED_CHALLENGES_1)
-		UserDefaults.standard.removeObject(forKey: KEY_STORED_CHALLENGES_1)
+		UserDefaults.standard.removeObject(forKey: KEY_FINISHED_SEAN_ALLEN)
+		UserDefaults.standard.removeObject(forKey: KEY_STORED_SEAN_ALLEN)
 		finishedChallenges = [:]
 		getSectionDetails()
 		tableView.reloadData()
@@ -51,19 +50,19 @@ class Section1Controller: UITableViewController {
 	
 	func getSectionDetails() {
 		
-		if let storedChallenges = UserDefaults.standard.object([Challenge].self, with: KEY_STORED_CHALLENGES_1) {
+		if let storedChallenges = UserDefaults.standard.object([Challenge].self, with: KEY_STORED_SEAN_ALLEN) {
 			self.challenges = storedChallenges
 		} else {
-			Service.getChallenges(section: "ChallengeSection1") { challenges in
+			Service.getChallenges(section: "SeanAllen") { challenges in
 				let shuffledChallenges = challenges.shuffled()
 				self.challenges = shuffledChallenges
-				UserDefaults.standard.set(object: shuffledChallenges, forKey: KEY_STORED_CHALLENGES_1)
+				UserDefaults.standard.set(object: shuffledChallenges, forKey: KEY_STORED_SEAN_ALLEN)
 			}
 		}
 	}
 	
 	func getFinishedChallenges() {
-		if let finishedChallenges = UserDefaults.standard.object(AnsweredChallenges.self, with: KEY_FINISHED_CHALLENGES_1) {
+		if let finishedChallenges = UserDefaults.standard.object(AnsweredChallenges.self, with: KEY_FINISHED_SEAN_ALLEN) {
 			self.finishedChallenges = finishedChallenges
 		}
 	}
@@ -71,10 +70,10 @@ class Section1Controller: UITableViewController {
 }
 
 	// MARK: - UITableViewDataSource
-extension Section1Controller {
+extension SeanAllenController {
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! Section1Cell
+		let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! SeanAllenCell
 		let challenge = challenges[indexPath.row]
 		let finishedChallenge = finishedChallenges[indexPath.row] ?? false
 		cell.accessoryType = finishedChallenge ? .checkmark : .none
@@ -89,7 +88,7 @@ extension Section1Controller {
 
 	// MARK: - UITableViewDelegate
 
-extension Section1Controller {
+extension SeanAllenController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let controller = AnswerController()
@@ -103,7 +102,7 @@ extension Section1Controller {
 
 	// MARK: - AnswerControllerDelegate
 
-extension Section1Controller: AnswerControllerDelegate {
+extension SeanAllenController: AnswerControllerDelegate {
 	func didTapDoneOnAnswerController(finishedChallenges: AnsweredChallenges) {
 		self.finishedChallenges = finishedChallenges
 		tableView.reloadData()

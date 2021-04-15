@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C43D1FB82627FF1C005E4938 /* SeanAllen.json in Resources */ = {isa = PBXBuildFile; fileRef = C43D1FB72627FF1C005E4938 /* SeanAllen.json */; };
+		C43D1FBF26280648005E4938 /* Section1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FEFE1261060AF00DCA4C3 /* Section1Cell.swift */; };
+		C43D1FC226280696005E4938 /* SeanAllenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D1FC126280696005E4938 /* SeanAllenCell.swift */; };
 		C44FEFDE2610603300DCA4C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FEFDD2610603300DCA4C3 /* Constants.swift */; };
-		C44FEFE2261060AF00DCA4C3 /* ChallengesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FEFE1261060AF00DCA4C3 /* ChallengesCell.swift */; };
 		C44FEFEC2610731000DCA4C3 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FEFEB2610731000DCA4C3 /* Service.swift */; };
 		C44FEFF526107CFA00DCA4C3 /* ChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FEFE72610704000DCA4C3 /* ChallengeViewModel.swift */; };
 		C44FF0002610878300DCA4C3 /* AnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E81260F4CF100735A9F /* AnswerController.swift */; };
@@ -25,7 +27,7 @@
 		C4B31E71260F17FF00735A9F /* Section2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E70260F17FF00735A9F /* Section2Controller.swift */; };
 		C4B31E74260F181700735A9F /* Section3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E73260F181700735A9F /* Section3Controller.swift */; };
 		C4B31E77260F186600735A9F /* Section4Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E76260F186600735A9F /* Section4Controller.swift */; };
-		C4B31E7B260F188800735A9F /* Section5Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E7A260F188800735A9F /* Section5Controller.swift */; };
+		C4B31E7B260F188800735A9F /* SeanAllenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E7A260F188800735A9F /* SeanAllenController.swift */; };
 		C4B31E7F260F1E0A00735A9F /* BasicTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E7E260F1E0A00735A9F /* BasicTextView.swift */; };
 		C4B31E86260F4D5400735A9F /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E85260F4D5400735A9F /* Challenge.swift */; };
 		C4B31E89260F581800735A9F /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B31E88260F581800735A9F /* Protocol.swift */; };
@@ -36,8 +38,11 @@
 /* Begin PBXFileReference section */
 		427B3DACBD360C6877301B46 /* Pods-HWS Swift Coding Challenges Tester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWS Swift Coding Challenges Tester.release.xcconfig"; path = "Target Support Files/Pods-HWS Swift Coding Challenges Tester/Pods-HWS Swift Coding Challenges Tester.release.xcconfig"; sourceTree = "<group>"; };
 		6651EC18822DC3A6756CEDC3 /* Pods-HWS Swift Coding Challenges Tester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWS Swift Coding Challenges Tester.debug.xcconfig"; path = "Target Support Files/Pods-HWS Swift Coding Challenges Tester/Pods-HWS Swift Coding Challenges Tester.debug.xcconfig"; sourceTree = "<group>"; };
+		C43D1FB72627FF1C005E4938 /* SeanAllen.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SeanAllen.json; sourceTree = "<group>"; };
+		C43D1FBA2627FF59005E4938 /* HWSTester.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HWSTester.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		C43D1FC126280696005E4938 /* SeanAllenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeanAllenCell.swift; sourceTree = "<group>"; };
 		C44FEFDD2610603300DCA4C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		C44FEFE1261060AF00DCA4C3 /* ChallengesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesCell.swift; sourceTree = "<group>"; };
+		C44FEFE1261060AF00DCA4C3 /* Section1Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section1Cell.swift; sourceTree = "<group>"; };
 		C44FEFE72610704000DCA4C3 /* ChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewModel.swift; sourceTree = "<group>"; };
 		C44FEFEB2610731000DCA4C3 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		C46D8C46260F069100F77633 /* HWS Swift Coding Challenges Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HWS Swift Coding Challenges Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,7 +60,7 @@
 		C4B31E70260F17FF00735A9F /* Section2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section2Controller.swift; sourceTree = "<group>"; };
 		C4B31E73260F181700735A9F /* Section3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section3Controller.swift; sourceTree = "<group>"; };
 		C4B31E76260F186600735A9F /* Section4Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section4Controller.swift; sourceTree = "<group>"; };
-		C4B31E7A260F188800735A9F /* Section5Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section5Controller.swift; sourceTree = "<group>"; };
+		C4B31E7A260F188800735A9F /* SeanAllenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeanAllenController.swift; sourceTree = "<group>"; };
 		C4B31E7E260F1E0A00735A9F /* BasicTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextView.swift; sourceTree = "<group>"; };
 		C4B31E81260F4CF100735A9F /* AnswerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerController.swift; sourceTree = "<group>"; };
 		C4B31E85260F4D5400735A9F /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
@@ -120,7 +125,8 @@
 		C44FEFF726107F5000DCA4C3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C44FEFE1261060AF00DCA4C3 /* ChallengesCell.swift */,
+				C44FEFE1261060AF00DCA4C3 /* Section1Cell.swift */,
+				C43D1FC126280696005E4938 /* SeanAllenCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -146,6 +152,7 @@
 		C46D8C48260F069100F77633 /* HWS Swift Coding Challenges Tester */ = {
 			isa = PBXGroup;
 			children = (
+				C43D1FBA2627FF59005E4938 /* HWSTester.playground */,
 				C4C1352E2611799C00097311 /* Utils */,
 				C44FEFEE26107B6300DCA4C3 /* View Models */,
 				C44FEFEA2610730400DCA4C3 /* Service */,
@@ -198,6 +205,7 @@
 			children = (
 				C4B31E85260F4D5400735A9F /* Challenge.swift */,
 				C485D8DA261D572200C39BD6 /* ChallengeSection1.json */,
+				C43D1FB72627FF1C005E4938 /* SeanAllen.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,7 +225,7 @@
 				C4B31E70260F17FF00735A9F /* Section2Controller.swift */,
 				C4B31E73260F181700735A9F /* Section3Controller.swift */,
 				C4B31E76260F186600735A9F /* Section4Controller.swift */,
-				C4B31E7A260F188800735A9F /* Section5Controller.swift */,
+				C4B31E7A260F188800735A9F /* SeanAllenController.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -297,6 +305,7 @@
 			files = (
 				C46D8C56260F069400F77633 /* LaunchScreen.storyboard in Resources */,
 				C485D8DB261D572200C39BD6 /* ChallengeSection1.json in Resources */,
+				C43D1FB82627FF1C005E4938 /* SeanAllen.json in Resources */,
 				C46D8C53260F069400F77633 /* Assets.xcassets in Resources */,
 				C46D8C51260F069200F77633 /* Main.storyboard in Resources */,
 			);
@@ -341,11 +350,12 @@
 				C4B31E89260F581800735A9F /* Protocol.swift in Sources */,
 				C4C135352611D92200097311 /* UserDefaults.swift in Sources */,
 				C4B31E54260F14A200735A9F /* MainTabController.swift in Sources */,
-				C44FEFE2261060AF00DCA4C3 /* ChallengesCell.swift in Sources */,
 				C44FEFDE2610603300DCA4C3 /* Constants.swift in Sources */,
-				C4B31E7B260F188800735A9F /* Section5Controller.swift in Sources */,
+				C43D1FC226280696005E4938 /* SeanAllenCell.swift in Sources */,
+				C4B31E7B260F188800735A9F /* SeanAllenController.swift in Sources */,
 				C46D8C4A260F069200F77633 /* AppDelegate.swift in Sources */,
 				C4B31E57260F14CD00735A9F /* Section1Controller.swift in Sources */,
+				C43D1FBF26280648005E4938 /* Section1Cell.swift in Sources */,
 				C44FEFEC2610731000DCA4C3 /* Service.swift in Sources */,
 				C46D8C89260F06FD00F77633 /* UIViewController.swift in Sources */,
 				C4B31E7F260F1E0A00735A9F /* BasicTextView.swift in Sources */,

@@ -108,7 +108,7 @@ class AnswerController: UIViewController {
 			resultLabel.textColor = .systemGreen
 			resultLabel.text = "CORRECT!"
 			finishedChallenges[indexRow] = true
-			UserDefaults.standard.set(object: finishedChallenges, forKey: KEY_FINISHED_CHALLENGES)
+			UserDefaults.standard.set(object: finishedChallenges, forKey: KEY_FINISHED_CHALLENGES_1)
 			delegate?.didTapDoneOnAnswerController(finishedChallenges: finishedChallenges)
 		} else if answerTextView.text.isEmpty {
 			resultLabel.text = "Enter your answer first"
